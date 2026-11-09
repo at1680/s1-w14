@@ -89,7 +89,7 @@ public class Monty {
                 return x+1;
             }
             else if (chosenDoor==2){
-                return ;
+                return (int)(Math.pow(2, x))-1;
             }
             if (chosenDoor==3){
                 return x;
