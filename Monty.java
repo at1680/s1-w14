@@ -84,7 +84,16 @@ public class Monty {
         if(chosenDoor!=doorWithCar)
             return 6-doorWithCar-chosenDoor;
         else {
-            return 4-doorWithCar;
+            int x =randoms.nextInt(2)+1;
+            if (chosenDoor==1){
+                return x+1;
+            }
+            else if (chosenDoor==2){
+                return ;
+            }
+            if (chosenDoor==3){
+                return x;
+            }
         }
     }
     
