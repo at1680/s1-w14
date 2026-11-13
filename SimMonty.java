@@ -28,7 +28,7 @@ public class SimMonty {
     
     // Set up the game, returning the position of the car (chosen randomly).
     private int gameStart ( ) {
-        int doorWithCar = randoms.nextInt (3) + 1;
+        int doorWithCar = randoms.nextInt (3);
         return doorWithCar;
     }
 
