@@ -14,7 +14,7 @@ public class SimMonty {
     }
     
     // Play the game, returning 1 if the contestant wins and 0 if not.
-    public int playGame ( ) {
+    public int playGame (int strategy) {
         int doorWithCar;
         int firstChoice, secondChoice;
         int goatDoor;
@@ -22,7 +22,7 @@ public class SimMonty {
         doorWithCar = gameStart ( );
         firstChoice = playerGuess ( );
         goatDoor = tempt (doorWithCar, firstChoice);
-        secondChoice = newGuess (goatDoor, firstChoice);
+        secondChoice = newGuess (goatDoor, firstChoice, strategy);
         return gameResult (doorWithCar, goatDoor, secondChoice);
     }
     
@@ -70,9 +70,9 @@ public class SimMonty {
     
     // The contestant decides on a second guess, aided (?) by knowing that the given
     // door has a goat.  Return the updated guess.
-    private int newGuess (int goatDoor, int firstChoice) {
+    private int newGuess (int goatDoor, int firstChoice, int strategy) {
         int guess;
-        guess = player.guess2 (goatDoor);
+        guess = player.guess2 (goatDoor, strategy);
         return guess;
     }
     
